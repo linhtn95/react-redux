@@ -18,3 +18,23 @@ TDD giúp code được gọn gàng hơn, ngăn chặn bug cũng như dễ dàng
 * https://stackoverflow.com/questions/16860/getting-started-with-unit-testing
 * https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/
 * https://hackernoon.com/a-crash-course-on-testing-with-node-js-6c7428d3da02
+### 1.2.3 Understand about Test runner (e.g jest, mocha) <br>
+### 1.2.4 Understand about Test Assertion Framework (e.g chai, jasmine) <br>
+### 1.2.5 Understand about spies, stubs and mocks (e.g sinon) (https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js) <br>
+### 1.2.6 Understand code coverage (e.g nyc) <br>
+### 1.2.7 Understand HTTP mocking (e.g nock) <br>
+## 1.3 Understand disadvantage of React alone
+## 1.4 Flux
+### 1.4.1 Understand Flux architecture
+### 1.4.2 Understand Universal Data Flow
+### 1.4.3 Understand Action, Dispatcher, Store, View
+## 1.5 Redux
+### 1.5.1 Understand Redux (https://redux.js.org/)
+### 1.5.2 Understand Action, Reducers, Store, Data Flow
+### 1.5.3 Understand Async Action, Async Flow, Middleware
+## 1.6 Redux Saga
+### 1.6.1 https://medium.freecodecamp.org/async-operations-using-redux-saga-2ba02ae077b3
+### 1.6.2 Understand limitation of Redux in Async Flow ?
+### 1.6.3 Understand ES6 generator (http://2ality.com/2015/03/es6-generators.html)
+### 1.6.4 Understand effect
+### 1.6.5 Understand fork, take, race, put, call, select, takeLatest, takeEvery
