@@ -25,7 +25,15 @@ TDD giúp code được gọn gàng hơn, ngăn chặn bug cũng như dễ dàng
 ### 1.2.7 Understand HTTP mocking (e.g nock) <br>
 ## 1.3 Understand disadvantage of React alone
 ## 1.4 Flux
-### 1.4.1 Understand Flux architecture
+### 1.4.1 Understand Flux architecture <br>
+Flux là một kiến trúc được Facebook đưa ra và được đưa vào React. Dữ liệu luôn chỉ di chuyển thoe một chiều duy nhất, khi có dữ liệu mới luồn sẽ bắt đầu lại từ đầu:
+                              ----------------------------------------
+                              |                                      |
+                            Action ---> Dispatcher ---> Store ---> View
+* Actions - Làm nhiệm vụ truyền dẫn dữ liệu tới Dispatcher 
+* Dispatcher - Nhận thông tin từ Actions, truyền tải dữ liệu tới các nơi đã đăng ký nhận thông tin.
+* Stores - Là nơi lưu trữ trạng thái và các logic của hệ thống, đây chính là nơi sẽ đăng ký nhận dữ liệu với Dispatcher.
+* Views chính là thành phần làm nhiệm vụ hiển thị nội dung ứng dụng
 ### 1.4.2 Understand Universal Data Flow
 ### 1.4.3 Understand Action, Dispatcher, Store, View
 ## 1.5 Redux
