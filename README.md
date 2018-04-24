@@ -18,10 +18,25 @@ TDD giúp code được gọn gàng hơn, ngăn chặn bug cũng như dễ dàng
 * https://stackoverflow.com/questions/16860/getting-started-with-unit-testing
 * https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/
 * https://hackernoon.com/a-crash-course-on-testing-with-node-js-6c7428d3da02
+Unit test là phương pháp testing theo từng đơn vị của code. Mục đích của unit test là đảm bảo mỗi phần trong phần mềm đảm bảo theo đúng yêu cầu đề ra. 
 ### 1.2.3 Understand about Test runner (e.g jest, mocha) <br>
+Test runner là một thư viện hoặc công cụ bao gồm các unit test, các thiết lập và sau đó thực hiện chúng và viết kết quả test ra console hoặc file log. Có nhiều loại test runner khác nhau ví dụ như NUnit và MSTest cho C#, JUnit cho Java, Jest hoặc mocha cho Javascript.
 ### 1.2.4 Understand about Test Assertion Framework (e.g chai, jasmine) <br>
+Nếu như test runner cung cấp môi trường để chạy các test và đưa ra kết quả thì Test framework là cái chúng ta dùng để viết các test. Ví dụ jasmine đưa ra các cú pháp để viết test:
+```
+describe("A suite is just a function", function() {
+  var a;
+
+  it("and so is a spec", function() {
+    a = true;
+
+    expect(a).toBe(true);
+  });
+});
+```
 ### 1.2.5 Understand about spies, stubs and mocks (e.g sinon) (https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js) <br>
 ### 1.2.6 Understand code coverage (e.g nyc) <br>
+Code coverage là tính xem có bao nhiêu dòng hay khối code được thực hiện trong khi automation test đang chạy. Ví dụ như ta có 90% code coverage thì có nghĩa là 10% code không được test.
 ### 1.2.7 Understand HTTP mocking (e.g nock) <br>
 ## 1.3 Understand disadvantage of React alone
 ## 1.4 Flux
