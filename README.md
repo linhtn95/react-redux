@@ -56,3 +56,12 @@ Flux là một kiến trúc được Facebook đưa ra và được đưa vào R
 * Dispatcher: có nhiệm vụ nhận action payload từ action và gửi nó tới các callback đã được đăng kí trước.
 * Store: là nơi chứa các trạng thái, logic của ứng dụng. Store có chứa các method callback đã được đăng ký với Dispatcher.
 * View: nhận input data từ người dùng cũng như lắng nghe các thay đổi từ Store để hiển thị kết quả, trạng thái của ứng dụng.
+## 1.5 Redux
+### 1.5.1 Understand Redux (https://redux.js.org/) <br>
+Redux là thư viện được thiết kế dựa trên kiến trúc Flux giúp quản lí state của ứng dụng dễ dàng hơn. Ví dụ như project của chúng ta có nhiều component và việc truyền dữ liệu qua lại giữa các component sẽ rất phức tạp vì vậy Redux đưa ra một giải pháp là các state được lưu trữ tại một điểm duy nhất - gọi là Store. <br>
+Redux có 3 nguyên tắc như sau:
+* Single source of truth: State của toàn bộ ứng dụng được lưu trong trong 1 store duy nhất là 1 Object mô hình tree.
+* State is read-only: Chỉ có 1 cách duy nhất để thay đổi state đó là tạo ra một action.
+* Changes are made with pure functions: Để chỉ rõ state tree được thay đổi bởi 1 action bạn phải viết pure reducers.
+### 1.5.2 Understand Action, Reducers, Store, Data Flow <br>
+Redux có 4 thành phần: 
