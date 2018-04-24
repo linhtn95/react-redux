@@ -65,3 +65,10 @@ Redux có 3 nguyên tắc như sau:
 * Changes are made with pure functions: Để chỉ rõ state tree được thay đổi bởi 1 action bạn phải viết pure reducers.
 ### 1.5.2 Understand Action, Reducers, Store, Data Flow <br>
 Redux có 4 thành phần: 
+* Action: Là nơi mang các thông tin dùng để gửi từ ứng dụng đến Store. Các thông tin này là 1 object có 2 thuộc tính:
+  - type: kiểu mô tả action.
+  - payload: giá trị tham số truyền vào.
+* Reducers: là nơi xác định state thay đổi như thế nào. Reducer nhận 2 tham số vào: 1 state cũ và action được gửi lên sau đó trả ra một state mới, ko làm thay đổi state cũ.
+* Store:  Là nơi quản lý State, cho phép truy cập State qua getState(), update State qua dispatch(action), đăng kí listener qua subscribe(listener).
+* View: Hiển thị dữ liệu được cung cấp bởi Store.
+Data flow: 
