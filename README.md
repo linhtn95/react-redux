@@ -41,7 +41,7 @@ Code coverage là tính xem có bao nhiêu dòng hay khối code được thực
 ## 1.3 Understand disadvantage of React alone
 ## 1.4 Flux
 ### 1.4.1 Understand Flux architecture <br>
-Flux là một kiến trúc được Facebook đưa ra và được đưa vào React. Dữ liệu luôn chỉ di chuyển thoe một chiều duy nhất, khi có dữ liệu mới luồn sẽ bắt đầu lại từ đầu:
+Flux là một kiến trúc được Facebook đưa ra và được đưa vào React. Dữ liệu luôn chỉ di chuyển thoe một chiều duy nhất, khi có dữ liệu mới luồn sẽ bắt đầu lại từ đầu: <br>
                               ----------------------------------------
                               |                                      |
                             Action ---> Dispatcher ---> Store ---> View
@@ -50,14 +50,3 @@ Flux là một kiến trúc được Facebook đưa ra và được đưa vào R
 * Stores - Là nơi lưu trữ trạng thái và các logic của hệ thống, đây chính là nơi sẽ đăng ký nhận dữ liệu với Dispatcher.
 * Views chính là thành phần làm nhiệm vụ hiển thị nội dung ứng dụng
 ### 1.4.2 Understand Universal Data Flow
-### 1.4.3 Understand Action, Dispatcher, Store, View
-## 1.5 Redux
-### 1.5.1 Understand Redux (https://redux.js.org/)
-### 1.5.2 Understand Action, Reducers, Store, Data Flow
-### 1.5.3 Understand Async Action, Async Flow, Middleware
-## 1.6 Redux Saga
-### 1.6.1 https://medium.freecodecamp.org/async-operations-using-redux-saga-2ba02ae077b3
-### 1.6.2 Understand limitation of Redux in Async Flow ?
-### 1.6.3 Understand ES6 generator (http://2ality.com/2015/03/es6-generators.html)
-### 1.6.4 Understand effect
-### 1.6.5 Understand fork, take, race, put, call, select, takeLatest, takeEvery
