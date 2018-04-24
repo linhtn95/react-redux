@@ -49,4 +49,10 @@ Flux là một kiến trúc được Facebook đưa ra và được đưa vào R
 * Dispatcher - Nhận thông tin từ Actions, truyền tải dữ liệu tới các nơi đã đăng ký nhận thông tin.
 * Stores - Là nơi lưu trữ trạng thái và các logic của hệ thống, đây chính là nơi sẽ đăng ký nhận dữ liệu với Dispatcher.
 * Views chính là thành phần làm nhiệm vụ hiển thị nội dung ứng dụng
-### 1.4.2 Understand Universal Data Flow
+### 1.4.2 Understand Universal Data Flow <br>
+...
+### 1.4.3 Understand Action, Dispatcher, Store, View
+* Action: 1 action được hiểu là mỗi sự kiện làm thay đổi trạng thái của ứng dụng và sẽ tạo ra một object action tương ứng với type và payload của action đó sau đó nó sẽ được chuyển tới Dispatcher.
+* Dispatcher: có nhiệm vụ nhận action payload từ action và gửi nó tới các callback đã được đăng kí trước.
+* Store: là nơi chứa các trạng thái, logic của ứng dụng. Store có chứa các method callback đã được đăng ký với Dispatcher.
+* View: nhận input data từ người dùng cũng như lắng nghe các thay đổi từ Store để hiển thị kết quả, trạng thái của ứng dụng.
