@@ -42,9 +42,7 @@ Code coverage là tính xem có bao nhiêu dòng hay khối code được thực
 ## 1.4 Flux
 ### 1.4.1 Understand Flux architecture <br>
 Flux là một kiến trúc được Facebook đưa ra và được đưa vào React. Dữ liệu luôn chỉ di chuyển thoe một chiều duy nhất, khi có dữ liệu mới luồn sẽ bắt đầu lại từ đầu: <br>
-                              ----------------------------------------  <br>
-                              |                                      |  <br>
-                            Action ---> Dispatcher ---> Store ---> View <br>
+ ![alt text](https://cdn-images-1.medium.com/max/800/1*lZM0yU9ExEMd7DggVxXkxA.png)
 * Actions - Làm nhiệm vụ truyền dẫn dữ liệu tới Dispatcher 
 * Dispatcher - Nhận thông tin từ Actions, truyền tải dữ liệu tới các nơi đã đăng ký nhận thông tin.
 * Stores - Là nơi lưu trữ trạng thái và các logic của hệ thống, đây chính là nơi sẽ đăng ký nhận dữ liệu với Dispatcher.
