@@ -36,7 +36,8 @@ describe("A suite is just a function", function() {
 ```
 ### 1.2.5 Understand about spies, stubs and mocks (e.g sinon) (https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js) <br>
 ### 1.2.6 Understand code coverage (e.g nyc) <br>
-Code coverage là tính xem có bao nhiêu dòng hay khối code được thực hiện trong khi automation test đang chạy. Ví dụ như ta có 90% code coverage thì có nghĩa là 10% code không được test.
+Code coverage là xác định xem có bao nhiêu code đã được test. Nó được tính theo công thức: <br>
+```Code Coverage = (Number of lines of code exercised)/(Total Number of lines of code) * 100%```
 ### 1.2.7 Understand HTTP mocking (e.g nock) <br>
 ## 1.3 Understand disadvantage of React alone
 ## 1.4 Flux
