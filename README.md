@@ -43,7 +43,7 @@ Code coverage là xác định xem có bao nhiêu code đã được test. Nó �
 ## 1.3 Understand disadvantage of React alone
 ## 1.4 Flux
 ### 1.4.1 Understand Flux architecture <br>
-Flux là một kiến trúc được Facebook đưa ra và được đưa vào React. Dữ liệu luôn chỉ di chuyển thoe một chiều duy nhất, khi có dữ liệu mới luồn sẽ bắt đầu lại từ đầu: <br>
+Flux là một kiến trúc được Facebook đưa ra và được đưa vào React. Dữ liệu luôn chỉ di chuyển theo một chiều duy nhất, khi có dữ liệu mới luồng sẽ bắt đầu lại từ đầu: <br>
  ![alt text](https://cdn-images-1.medium.com/max/800/1*lZM0yU9ExEMd7DggVxXkxA.png)
 * Actions - Làm nhiệm vụ truyền dẫn dữ liệu tới Dispatcher 
 * Dispatcher - Nhận thông tin từ Actions, truyền tải dữ liệu tới các nơi đã đăng ký nhận thông tin.
