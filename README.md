@@ -35,6 +35,9 @@ describe("A suite is just a function", function() {
 });
 ```
 ### 1.2.5 Understand about spies, stubs and mocks (e.g sinon) (https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js) <br>
+* Spies được dùng để lấy thông tin các lời gọi hàm. 1 spy có thể chỉ ra một hàm được gọi bao nhiêu lần, đối số của mỗi hàm, giá trị trả về là gì hoặc lỗi nào trả về.
+* Stubs giống như spy 
+
 ### 1.2.6 Understand code coverage (e.g nyc) <br>
 Code coverage là xác định xem có bao nhiêu code đã được test. Nó được tính theo công thức: <br>
 ```Code Coverage = (Number of lines of code exercised)/(Total Number of lines of code) * 100%```
