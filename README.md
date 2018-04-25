@@ -70,13 +70,11 @@ Redux có 4 thành phần chính:
   - payload: giá trị tham số truyền vào.
 * Reducers: là nơi xác định state thay đổi như thế nào. Reducer nhận 2 tham số vào: 1 state cũ và action được gửi lên sau đó trả ra một state mới, ko làm thay đổi state cũ.
 * Store:  Là nơi quản lý State, cho phép truy cập State qua getState(), update State qua dispatch(action), đăng kí listener qua subscribe(listener).
-* View: Hiển thị dữ liệu được cung cấp bởi Store.
+* View: Hiển thị dữ liệu được cung cấp bởi Store. <br>
 Data flow: Vòng đời của 1 ứng dung Redux bao gồm 4 bước:
-* Gọi store.dispatch(action): 1 action là một object mô tả những gì sẽ xảy ra
-```
-{
-  type: 'ADD',
-  count: 1
-}
-```
-* Redux store gọi reducer function
+* Gọi store.dispatch(action): 1 action là một object mô tả những gì sẽ xảy ra.
+* Redux store gọi reducer function: store sẽ gửi hai tham số là state hiện tại và action.
+* Root reducer có thể kết hợp output của nhiều reducers thành một single state tree: Redux có helper function combineReducers(), giúp cho việc chia nhỏ function thành các function quản lý các nhánh của state tree.
+* Redux store lưu lại toàn bộ state tree được trả về bởi root reducer: state tree mới này sẽ là trạng thái mới của ứng dụng. Mỗi một listener registered với store.subscribe(listener) sẽ được gọi. Listenter có thể gọi store.getState() để lấy current state.
+### 1.5.3 Understand Async Action, Async Flow, Middleware
+
