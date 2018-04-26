@@ -119,6 +119,36 @@ Data flow: Vòng đời của 1 ứng dung Redux bao gồm 4 bước:
 * Root reducer có thể kết hợp output của nhiều reducers thành một single state tree: Redux có helper function combineReducers(), giúp cho việc chia nhỏ function thành các function quản lý các nhánh của state tree.
 * Redux store lưu lại toàn bộ state tree được trả về bởi root reducer: state tree mới này sẽ là trạng thái mới của ứng dụng. Mỗi một listener registered với store.subscribe(listener) sẽ được gọi. Listenter có thể gọi store.getState() để lấy current state.
 ### 1.5.3 Understand Async Action, Async Flow, Middleware
-* Async Action: 
-* Async Flow:
-* Middleware
+* Async Action: đôi khi trong các sự kiện chúng ta muốn nó chạy bất đồng bộ. Ví dụ khi login thì ta phải gửi request lên server
+và đợi server phản hồi về tùy vào kết quả thành công hay thất bại cần dispatch một action tương ứng để store update lại state của ứng dụng và hiển thị lên view.
+* Async Flow: không đồng bộ được thực hiện nhờ middleware: redux-thunk, redux promise cho phép gửi đi nhiều hơn một là action, có thể là hàm hoặc promise
+* Middleware: Đặt giữa gửi đi action và reducer, sử dụng để ghi log, báo lỗi, nhận API không đồng bộ, routing...
+## 1.6 Redux Saga
+### 1.6.1 https://medium.freecodecamp.org/async-operations-using-redux-saga-2ba02ae077b3 <br>
+Redux-Saga là một thư viện redux middleware, giúp quản lý những side effect trong ứng dụng redux trở nên đơn giản hơn. Bằng việc sử dụng tối đa tính năng Generatorscủa ES6, nó cho phép ta viết async code nhìn giống như là synchronos.
+### 1.6.2 Understand limitation of Redux in Async Flow ?
+### 1.6.3 Understand ES6 generator (http://2ality.com/2015/03/es6-generators.html) <br>
+generator function là một tính năng mới của ES6 có khả năng tạm ngưng thực thi trước khi hàm kết thúc, và có thể tiếp tục chạy ở 1 thời điểm khác.
+```
+function* name([param[, param[, ... param]]]) {
+   // statements
+}
+```
+Hàm sẽ không được thực thi ngay sau khi gọi, mà thay vào đó generator function trả về iterator, giống như con trỏ trong vòng lặp. 
+Sau khi hàm next() của iterator được gọi, generator function sẽ thực thi hàm cho đến khi gặp từ khóa yield đầu tiên. yield sẽ trả về giá trị cho iterator, generator function kết thúc cho đến khi hết giá trị để yield.
+```
+function* idMaker() {
+  var index = 0;
+  while (index < index+1)
+    yield index++;
+}
+
+var gen = idMaker();
+
+console.log(gen.next().value); // 0
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3
+```
+### 1.6.4 Understand effect
+### 1.6.5 Understand fork, take, race, put, call, select, takeLatest, takeEvery
