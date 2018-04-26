@@ -74,8 +74,9 @@ describe("A suite is just a function", function() {
 Code coverage là xác định xem có bao nhiêu code đã được test. Nó được tính theo công thức: <br>
 ```Code Coverage = (Number of lines of code exercised)/(Total Number of lines of code) * 100%```
 ### 1.2.7 Understand HTTP mocking (e.g nock) <br>
+HTTP mocking tạo một server ảo để có thể kiểm tra từng request có reponse về theo đúng yêu cầu hay không.
 ## 1.3 Understand disadvantage of React alone <br>
-
+- Truyền props từ component cha xuống component con và từ component con lên component cha rất phức tạp nếu ứng dụng có nhiều tầng component.
 ## 1.4 Flux
 ### 1.4.1 Understand Flux architecture <br>
 Flux là một kiến trúc được Facebook đưa ra và được đưa vào React. Dữ liệu luôn chỉ di chuyển theo một chiều duy nhất, khi có dữ liệu mới luồng sẽ bắt đầu lại từ đầu: <br>
@@ -85,7 +86,13 @@ Flux là một kiến trúc được Facebook đưa ra và được đưa vào R
 * Stores - Là nơi lưu trữ trạng thái và các logic của hệ thống, đây chính là nơi sẽ đăng ký nhận dữ liệu với Dispatcher.
 * Views chính là thành phần làm nhiệm vụ hiển thị nội dung ứng dụng
 ### 1.4.2 Understand Universal Data Flow <br>
-...
+Flux giúp làm việc với các component dễ dàng hơn thông qua luồng dữ liệu một chiều (Unidirectional Data Flow).
+![alt text](https://cdn-images-1.medium.com/max/800/1*lZM0yU9ExEMd7DggVxXkxA.png)
+  * Views chính là thành phần làm nhiệm vụ hiển thị nội dung ứng dụng. 
+  * Khi người dùng tương tác với ứng dụng(click button, nhập dữ liệu...) làm thay đổi state của ứng dụng, view sẽ thông qua action gửi thông tin tới dispatcher.
+  * Sau khi nhận được thông tin từ Action, Dispatcher làm nhiệm vụ gửi nội dung nhận được tới các Store đăng ký lắng nghe sự kiện thay đổi từ trước đó.
+  * Store sau khi nhận thông tin, tiến hành cập nhật lại state.
+  * Sau đó view hiển thị lại nội dung.
 ### 1.4.3 Understand Action, Dispatcher, Store, View
 * Action: 1 action được hiểu là mỗi sự kiện làm thay đổi trạng thái của ứng dụng và sẽ tạo ra một object action tương ứng với type và payload của action đó sau đó nó sẽ được chuyển tới Dispatcher.
 * Dispatcher: có nhiệm vụ nhận action payload từ action và gửi nó tới các callback đã được đăng kí trước.
