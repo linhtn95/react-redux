@@ -18,7 +18,36 @@ TDD giúp code được gọn gàng hơn, ngăn chặn bug cũng như dễ dàng
 * https://stackoverflow.com/questions/16860/getting-started-with-unit-testing
 * https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/
 * https://hackernoon.com/a-crash-course-on-testing-with-node-js-6c7428d3da02
-Unit test là phương pháp testing theo từng đơn vị của code. Mục đích của unit test là đảm bảo mỗi phần trong phần mềm đảm bảo theo đúng yêu cầu đề ra. 
+Unit test là phương pháp testing theo từng đơn vị của code. Mục đích của unit test là đảm bảo mỗi phần trong phần mềm đảm bảo theo đúng yêu cầu đề ra. Một unit test bao gồm ba phần:
+  * Arrange.
+  * Act.
+  * Assert
+```
+function add(a, b) {
+  return a + b;
+} 
+
+function testAdd() {
+
+  // Arrange
+  let a = 2;
+  let b = 4;
+  let sum1 = a + b;
+  
+  // Act
+  let sum2 = add(a, b);
+  console.log('Fuction add() should return the sum of its two parameters.');
+  console.log('Expect ' + sum1 + ' to equal ' + sum2 + '.');
+  
+  // Assert
+  if(sum1 === sum2) {
+    console.log('PASSED');
+  }
+  console.log('FAILED');
+}
+
+testAdd();
+```
 ### 1.2.3 Understand about Test runner (e.g jest, mocha) <br>
 Test runner là một thư viện hoặc công cụ bao gồm các unit test, các thiết lập và sau đó thực hiện chúng và viết kết quả test ra console hoặc file log. Có nhiều loại test runner khác nhau ví dụ như NUnit và MSTest cho C#, JUnit cho Java, Jest hoặc mocha cho Javascript.
 ### 1.2.4 Understand about Test Assertion Framework (e.g chai, jasmine) <br>
@@ -35,7 +64,12 @@ describe("A suite is just a function", function() {
 });
 ```
 ### 1.2.5 Understand about spies, stubs and mocks (e.g sinon) (https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js) <br>
-* Spies được dùng để lấy thông tin các lời gọi hàm. 1 spy có thể chỉ ra một hàm được gọi bao nhiêu lần, đối số của mỗi hàm, giá trị trả về là gì hoặc lỗi nào trả về.
+* Spies được dùng để lấy thông tin các lời gọi hàm. 1 spy có thể chỉ ra một hàm được gọi bao nhiêu lần, đối số của mỗi hàm, giá trị trả về là gì hoặc lỗi nào trả về. Spy được sử dụng khi mục đích của test là kiểm tra điều gì đã xảy ra. Spy thường được dùng nhiều nhất để kiểm tra một hàm được gọi bao nhiêu lần thông qua ```sinon.assert.callCount```, ```sinon.assert.calledOnce```, ```sinon.assert.notCalled```,... hoặc kiểm tra xem đối số nào đã được đưa vào hàm thông qua ```sinon.assert.calledWith```, ```spy.lastCall```, ```spy.getCall()```,...
+* Stubs giống như spies, ngoại trừ việc nó thay thế targer function. Stub thường được sử dụng để:
+  * Thay thế một đoạn code có vấn đề: nếu một function phụ thuộc vào các yếu tố bên ngoài chẳng hạn như request lên server hay kết nối với database, việc này ta không thể kiểm soát được. Vì vậy việc viết test trở nên khó khăn hơn.
+  * Trigger các code path khác nhau: nếu đoạn code ta đang test gọi một hàm khác chúng ta cần test nó sẽ hoạt động như thế nào nếu có lỗi.
+  * Stubs có thể đơn giản hóa việc testing code bất đồng bộ.
+* Mock: 
 ### 1.2.6 Understand code coverage (e.g nyc) <br>
 Code coverage là xác định xem có bao nhiêu code đã được test. Nó được tính theo công thức: <br>
 ```Code Coverage = (Number of lines of code exercised)/(Total Number of lines of code) * 100%```
