@@ -69,12 +69,13 @@ describe("A suite is just a function", function() {
   * Thay thế một đoạn code có vấn đề: nếu một function phụ thuộc vào các yếu tố bên ngoài chẳng hạn như request lên server hay kết nối với database, việc này ta không thể kiểm soát được. Vì vậy việc viết test trở nên khó khăn hơn.
   * Trigger các code path khác nhau: nếu đoạn code ta đang test gọi một hàm khác chúng ta cần test nó sẽ hoạt động như thế nào nếu có lỗi.
   * Stubs có thể đơn giản hóa việc testing code bất đồng bộ.
-* Mock: 
+* Mock: nên được sử dụng chủ yếu khi dùng stub nhưng cần xác mình nhiều hành vi cụ thể hơn trên đó.
 ### 1.2.6 Understand code coverage (e.g nyc) <br>
 Code coverage là xác định xem có bao nhiêu code đã được test. Nó được tính theo công thức: <br>
 ```Code Coverage = (Number of lines of code exercised)/(Total Number of lines of code) * 100%```
 ### 1.2.7 Understand HTTP mocking (e.g nock) <br>
-## 1.3 Understand disadvantage of React alone
+## 1.3 Understand disadvantage of React alone <br>
+
 ## 1.4 Flux
 ### 1.4.1 Understand Flux architecture <br>
 Flux là một kiến trúc được Facebook đưa ra và được đưa vào React. Dữ liệu luôn chỉ di chuyển theo một chiều duy nhất, khi có dữ liệu mới luồng sẽ bắt đầu lại từ đầu: <br>
@@ -111,4 +112,6 @@ Data flow: Vòng đời của 1 ứng dung Redux bao gồm 4 bước:
 * Root reducer có thể kết hợp output của nhiều reducers thành một single state tree: Redux có helper function combineReducers(), giúp cho việc chia nhỏ function thành các function quản lý các nhánh của state tree.
 * Redux store lưu lại toàn bộ state tree được trả về bởi root reducer: state tree mới này sẽ là trạng thái mới của ứng dụng. Mỗi một listener registered với store.subscribe(listener) sẽ được gọi. Listenter có thể gọi store.getState() để lấy current state.
 ### 1.5.3 Understand Async Action, Async Flow, Middleware
-
+* Async Action: 
+* Async Flow:
+* Middleware
